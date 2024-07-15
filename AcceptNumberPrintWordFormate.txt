@@ -1,0 +1,123 @@
+package com.hussainIT.array;
+
+import java.util.Scanner;
+
+public class AcceptNumberPrintWordFormate {
+	
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Enter a number to convert the word ");
+		int number = scanner.nextInt();
+		String oneToHundered = new AcceptNumberPrintWordFormate().convert(number);
+		System.out.println(oneToHundered);
+	}
+	public String oneToHundered(int number) {
+		String str=" ";
+		while(number !=0) {
+			if(number==1) {
+				str=str+"One ";
+				number=0;
+			}else if(number==2) {
+				str=str+"two";
+				number=0;
+			}else if(number==3) {
+				str=str+"three";
+				number=0;
+			}else if(number==4) {
+				str=str+"four";
+				number=0;
+			}else if(number==5) {
+				str=str+"five";
+				number=0;
+			}else if(number==6) {
+				str=str+"six";
+				number=0;
+			}else if(number==7) {
+				str=str+"seven";
+				number=0;
+			}else if(number==8) {
+				str=str+"eight";
+				number=0;
+			}else if(number==9) {
+				str=str+"nine";
+				number=0;
+			}else if(number==10) {
+				str=str+"ten";
+				number=0;
+			}else if(number==11) {
+				str=str+"eleven";
+				number=0;
+			}else if(number ==12) {
+				str=str+"twelve";
+				number=0;
+			}else if(number == 13) {
+				str=str+"thirteen";
+				number=0;
+			}else if(number== 14) {
+				str=str+"fourteen";
+				number=0;
+			} else if(number == 15) {
+				str=str+"fifteen";
+				number=0;
+			}
+			else if(number==16) {
+				str=str+"sixteen";
+				number=0;
+			}else if(number == 17) {
+				str=str+"seventeen";
+				number=0;
+			}else if(number==18) {
+				str=str+"eighteen";
+				number=0;
+			}else if(number==19) {
+				str=str+"nineteen";
+				number=0;
+			}else if(number >=20 && number <30) {
+				str=str+"Tweenty ";
+				number=number-20;
+			}else if(number >=30  && number <40) {
+				str=str+"Thirty ";
+				number=number-30;
+			}else if(number >=40 && number <50) {
+				str=str+"Fourty ";
+				number=number-40;
+			} else if(number >=50 && number <60) {
+				str=str+"Fifty ";
+				number=number-50;
+			} else if(number >=60 && number <70) {
+				str=str+"sixty ";
+				number=number-60;
+			}else if(number >70 && number <80) {
+				str=str+"Seventy";
+				number=number-70;
+			}else if(number > 80 && number <90) {
+				str=str+" eighty ";
+				number=number-80;
+			}else if(number >=90 && number <100) {
+				str=str+"Ninety ";
+				number=number-90;
+			}
+		}
+		return str;
+	}
+	
+	public String convert(int number) {
+		String str=" ";
+		while(number != 0) {
+			if(number > 1 && number <100 ) {
+				str=str+oneToHundered(number);
+				number=0;
+			}else if(number >=100 && number <1000) {
+			str=str+oneToHundered(number/100);
+			str=str+"Hundred";
+			number=number % 100;
+			}else if(number >=1000 && number <10000) {
+				str=str+oneToHundered(number/1000);
+				str=str+"Thousand ";
+				number=number%1000;
+			}
+		}
+		return str;
+	}
+	
+}
